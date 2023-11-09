@@ -1,6 +1,6 @@
 <?php
 
-use App\Fixer\ClassNotation\CustomControllerOrderFixer;
+use Tightenco\Duster\App\Fixer\ClassNotation\CustomControllerOrderFixer;
 use PhpCsFixer\Config;
 
 return (new Config())

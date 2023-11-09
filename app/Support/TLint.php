@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Support;
+namespace Tightenco\Duster\App\Support;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Application;

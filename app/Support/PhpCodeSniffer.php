@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Support;
+namespace Tightenco\Duster\App\Support;
 
-use App\Project;
+use Tightenco\Duster\App\Project;
 use PHP_CodeSniffer\Config;
 use PHP_CodeSniffer\Runner;
 use Symfony\Component\Console\Output\OutputInterface;

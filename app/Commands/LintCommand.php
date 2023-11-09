@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Commands;
+namespace Tightenco\Duster\App\Commands;
 
-use App\Support\ConfiguresForLintOrFix;
-use App\Support\GetsCleaner;
+use Tightenco\Duster\App\Support\ConfiguresForLintOrFix;
+use Tightenco\Duster\App\Support\GetsCleaner;
 use Exception;
 use LaravelZero\Framework\Commands\Command;
 use LaravelZero\Framework\Exceptions\ConsoleException;

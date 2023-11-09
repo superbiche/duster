@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Support;
+namespace Tightenco\Duster\App\Support;
 
-use App\Actions\ElaborateSummary;
-use App\Actions\FixCode;
-use App\Commands\DefaultCommand;
+use Tightenco\Duster\App\Actions\ElaborateSummary;
+use Tightenco\Duster\App\Actions\FixCode;
+use Tightenco\Duster\App\Commands\DefaultCommand;
 
 class Pint extends Tool
 {

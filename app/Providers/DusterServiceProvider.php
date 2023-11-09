@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Providers;
+namespace Tightenco\Duster\App\Providers;
 
-use App\Project;
-use App\Support\DusterConfig;
+use Tightenco\Duster\App\Project;
+use Tightenco\Duster\App\Support\DusterConfig;
 use Illuminate\Support\ServiceProvider;
 use Symfony\Component\Console\Input\InputInterface;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Contracts;
+namespace Tightenco\Duster\App\Contracts;
 
 use Symfony\Component\Console\Input\InputInterface;
 

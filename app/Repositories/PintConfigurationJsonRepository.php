@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace Tightenco\Duster\App\Repositories;
 
 class PintConfigurationJsonRepository extends ConfigurationJsonRepository
 {

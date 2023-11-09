@@ -1,6 +1,6 @@
 <?php
 
-use App\Commands\CommandsCommand;
+use Tightenco\Duster\App\Commands\CommandsCommand;
 
 return [
 

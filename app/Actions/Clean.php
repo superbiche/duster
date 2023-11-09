@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Actions;
+namespace Tightenco\Duster\App\Actions;
 
-use App\Support\Tool;
+use Tightenco\Duster\App\Support\Tool;
 use Illuminate\Console\Command;
 
 class Clean

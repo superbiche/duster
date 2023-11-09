@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Tightenco\Duster\App;
 
 use LaravelZero\Framework\Kernel as BaseKernel;
 use Symfony\Component\Console\Input\InputInterface;

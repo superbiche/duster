@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Support;
+namespace Tightenco\Duster\App\Support;
 
-use App\Actions\ElaborateSummary;
-use App\Project;
+use Tightenco\Duster\App\Actions\ElaborateSummary;
+use Tightenco\Duster\App\Project;
 use ArrayIterator;
 use PhpCsFixer\Config;
 use PhpCsFixer\ConfigInterface;

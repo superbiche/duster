@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Providers;
+namespace Tightenco\Duster\App\Providers;
 
-use App\Actions\ElaborateSummary;
-use App\Actions\FixCode;
-use App\Commands\DefaultCommand;
-use App\Contracts\PathsRepository;
-use App\Contracts\PintInputInterface;
-use App\Output\ProgressOutput;
-use App\Output\SummaryOutput;
-use App\Project;
-use App\Repositories\ConfigurationJsonRepository;
-use App\Repositories\GitPathsRepository;
-use App\Repositories\PintConfigurationJsonRepository;
-use App\Support\DusterConfig;
+use Tightenco\Duster\App\Actions\ElaborateSummary;
+use Tightenco\Duster\App\Actions\FixCode;
+use Tightenco\Duster\App\Commands\DefaultCommand;
+use Tightenco\Duster\App\Contracts\PathsRepository;
+use Tightenco\Duster\App\Contracts\PintInputInterface;
+use Tightenco\Duster\App\Output\ProgressOutput;
+use Tightenco\Duster\App\Output\SummaryOutput;
+use Tightenco\Duster\App\Project;
+use Tightenco\Duster\App\Repositories\ConfigurationJsonRepository;
+use Tightenco\Duster\App\Repositories\GitPathsRepository;
+use Tightenco\Duster\App\Repositories\PintConfigurationJsonRepository;
+use Tightenco\Duster\App\Support\DusterConfig;
 use Illuminate\Support\ServiceProvider;
 use PhpCsFixer\Error\ErrorsManager;
 use Symfony\Component\Console\Input\ArrayInput;

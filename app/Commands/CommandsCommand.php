@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Commands;
+namespace Tightenco\Duster\App\Commands;
 
 use LaravelZero\Framework\Commands\Command;
 
