@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "705f3229e82bbcc0ae3b5f93119795f6",
+    "content-hash": "16ddedf7062c2e4c811146e209aaa5da",
     "packages": [],
     "packages-dev": [
         {
@@ -595,6 +595,45 @@
                 }
             ],
             "time": "2023-10-12T13:47:26+00:00"
+        },
+        {
+            "name": "gd-75/php-cs-fixer-enforce-double-quotes",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gd-75/php-cs-fixer-enforce-double-quotes.git",
+                "reference": "ceca7ff8006caede6ef09cc5d9958a1d9f5b2472"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gd-75/php-cs-fixer-enforce-double-quotes/zipball/ceca7ff8006caede6ef09cc5d9958a1d9f5b2472",
+                "reference": "ceca7ff8006caede6ef09cc5d9958a1d9f5b2472",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "php-cs-fixer/phpunit-constraint-isidenticalstring": "^1.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GD75\\DoubleQuoteFixer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A rule for PHP CS Fixer to enforce double quotes.",
+            "support": {
+                "issues": "https://github.com/gd-75/php-cs-fixer-enforce-double-quotes/issues",
+                "source": "https://github.com/gd-75/php-cs-fixer-enforce-double-quotes/tree/1.1.0"
+            },
+            "time": "2022-07-12T06:00:30+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -5218,5 +5257,5 @@
     "platform-overrides": {
         "php": "8.1.0"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }

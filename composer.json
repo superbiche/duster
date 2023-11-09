@@ -34,6 +34,7 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.21.1",
+        "gd-75/php-cs-fixer-enforce-double-quotes": "^1.1",
         "laravel-zero/framework": "^10.1.1",
         "laravel/pint": "^v1.11.0",
         "nunomaduro/termwind": "^1.15.1",

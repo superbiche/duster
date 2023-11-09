@@ -1,5 +1,4 @@
 {
-    "chmod": "0755",
     "directories": [
         "app",
         "bootstrap",
@@ -18,5 +17,10 @@
     "compactors": [
         "KevinGH\\Box\\Compactor\\Php",
         "KevinGH\\Box\\Compactor\\Json"
-    ]
+    ],
+    "blacklist": [
+        "builds/duster"
+    ],
+    "main": "./duster",
+    "output": "builds/duster"
 }

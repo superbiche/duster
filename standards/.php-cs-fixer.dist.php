@@ -3,6 +3,7 @@
 use App\Fixer\ClassNotation\CustomControllerOrderFixer;
 use App\Fixer\ClassNotation\CustomOrderedClassElementsFixer;
 use App\Fixer\ClassNotation\CustomPhpUnitOrderFixer;
+use GD75\DoubleQuoteFixer\DoubleQuoteFixer;
 use App\Support\PhpCsFixer;
 use PhpCsFixer\Config;
 
@@ -13,6 +14,7 @@ return (new Config())
         new CustomControllerOrderFixer(),
         new CustomOrderedClassElementsFixer(),
         new CustomPhpUnitOrderFixer(),
+        new DoubleQuoteFixer(),
     ])
     ->setRules([
         'Tighten/custom_controller_order' => true,
