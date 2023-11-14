@@ -21,9 +21,9 @@ class PhpCsFixer extends Tool
     public static function getFinder(): Finder
     {
         return Finder::create()
-            ->notName([
-                '*.blade.php',
-            ])
+            // ->notName([
+            //     '*.blade.php',
+            // ])
             ->ignoreDotFiles(true)
             ->ignoreVCS(true);
     }
