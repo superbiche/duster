@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace App\Fixer\ClassNotation;
 
-use PhpCsFixer\Indicator\PhpUnitTestCaseIndicator;
+use PhpCsFixer\Tokenizer\Analyzer\PhpUnitTestCaseAnalyzer;
 use PhpCsFixer\Tokenizer\Tokens;
+use ReflectionMethod;
 use SplFileInfo;
 
 class CustomPhpUnitOrderFixer extends CustomOrderedClassElementsFixer
@@ -56,13 +57,14 @@ class CustomPhpUnitOrderFixer extends CustomOrderedClassElementsFixer
 
     protected function applyFix(SplFileInfo $file, Tokens $tokens): void
     {
-        $phpUnitTestCaseIndicator = new PhpUnitTestCaseIndicator;
+        $phpUnitTestCaseAnalyzer = new PhpUnitTestCaseAnalyzer();
+        $isPhpUnitClass = new ReflectionMethod(PhpUnitTestCaseAnalyzer::class, "isPhpUnitClass");
 
         for ($index = $tokens->count() - 1; $index > 0; $index--) {
-            if ($tokens[$index]->isGivenKind(T_CLASS) && $phpUnitTestCaseIndicator->isPhpUnitClass($tokens, $index)) {
-                parent::applyFix($file, $tokens);
-                break;
-            }
-        }
+              if ($tokens[$index]->isGivenKind(T_CLASS) && $isPhpUnitClass->invokeArgs($phpUnitTestCaseAnalyzer, [$tokens, $index])) {
+                  parent::applyFix($file, $tokens);
+                  break;
+              }
+          }
     }
 }
