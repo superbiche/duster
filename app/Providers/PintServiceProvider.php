@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Actions\ElaborateSummary;
 use App\Actions\FixCode;
 use App\Commands\DefaultCommand;
+use App\Concerns\GetsCpuCount;
 use App\Contracts\PathsRepository;
 use App\Contracts\PintInputInterface;
 use App\Output\ProgressOutput;
@@ -33,7 +34,11 @@ class PintServiceProvider extends ServiceProvider
             $input = $this->app->get(InputInterface::class);
 
             return new ArrayInput(
-                ['--test' => $input->getArgument('command') === 'lint', 'path' => Project::paths($input)],
+                [
+                    '--test' => $input->getArgument('command') === 'lint',
+                    'path' => Project::paths($input),
+                    '--parallel' => true,
+                ],
                 resolve(DefaultCommand::class)->getDefinition()
             );
         });
