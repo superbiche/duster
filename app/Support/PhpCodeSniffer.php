@@ -23,7 +23,7 @@ class PhpCodeSniffer extends Tool
 
         $fix = $this->process('runPHPCBF', $this->getPaths());
 
-        $lint = $this->process('runPHPCS', ['-n', '--report=summary', ...$this->getPaths()]);
+        $lint = $this->process('runPHPCS', ['-n', '--parallel=' . $this->getNumberOfCores(),  '--report=summary', ...$this->getPaths()]);
 
         if ($lint !== 0) {
             $this->failure('PHP Code_Sniffer found errors that cannot be fixed automatically.');
@@ -44,6 +44,8 @@ class PhpCodeSniffer extends Tool
         $ignore = $this->dusterConfig->get('exclude')
             ? ['--ignore=' . implode(',', $this->dusterConfig->get('exclude'))]
             : [];
+
+        $parallel = $this->dusterConfig->get('parallel') ? '--parallel=all' : '';
 
         $_SERVER['argv'] = [
             'Duster',
