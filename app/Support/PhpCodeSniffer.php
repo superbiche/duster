@@ -23,7 +23,7 @@ class PhpCodeSniffer extends Tool
 
         $fix = $this->process('runPHPCBF', $this->getPaths());
 
-        $lint = $this->process('runPHPCS', ['-n', '--parallel=' . $this->getNumberOfCores(),  '--report=summary', ...$this->getPaths()]);
+        $lint = $this->process('runPHPCS', ['-n', '--parallel=' . $this->getCpuCount(),  '--report=summary', ...$this->getPaths()]);
 
         if ($lint !== 0) {
             $this->failure('PHP Code_Sniffer found errors that cannot be fixed automatically.');
